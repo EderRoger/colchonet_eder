@@ -9,12 +9,14 @@ gem 'jbuilder', '~> 2.0'
 gem 'mongo'
 gem 'mongoid'
 gem 'bson_ext'
+# To use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1.7'
 
 #gem 'turbolinks'
 #gem 'sdoc', '~> 0.4.0',          group: :doc
 #gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 # Use Capistrano for deployment
