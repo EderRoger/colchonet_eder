@@ -1,9 +1,10 @@
 pt-BR:
-  attributes:
-    user:
-      bio: Biografia
-      email: Email
-      full_name: Nome completo
-      location: Localização
-      password: Senha
-      password_confirmation: Confirme sua senha
+  mongoid:
+    attributes:
+      user:
+        bio: Biografia
+        email: Email
+        full_name: Nome completo
+        location: Localização
+        password: Senha
+        password_confirmation: Confirme sua senha
