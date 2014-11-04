@@ -8,3 +8,18 @@ pt-BR:
         location: Localização
         password: Senha
         password_confirmation: Confirme sua senha
+  users:
+    new:
+      title: Cadastro
+    show:
+      title: "Perfil: %{user_name}"
+      edit: 'Editar perfil'
+      location: "Localização: %{location}"
+      bio: "Bio: %{bio}"
+  links:
+    back: Voltar
+  layout:
+    rooms: Quartos
+    signup: Cadastro
+  general:
+    form_error: Há erros no formulário, por favor verifique.
