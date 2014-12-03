@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class User
   include Mongoid::Document
   include ActiveModel::SecurePassword
@@ -9,6 +11,8 @@ class User
   field :bio, type: String
   field :confirmed_at, type: DateTime
   field :confirmation_token, type: String
+
+  scope :confirmed, -> { where.not(confirmed_at: nil) }
 
   EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
 
@@ -32,6 +36,13 @@ class User
 
   def confirmed?
     confirmed_at.present?
+  end
+
+  def self.authenticate(email, password)
+    user = confirmed.find_by(email: email)
+    if user.present?
+      user.authenticate(password)
+    end
   end
 
   private
