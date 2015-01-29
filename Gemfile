@@ -11,6 +11,9 @@ gem 'mongoid'
 gem 'bson_ext'
 # To use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+group :development do
+  gem 'better_errors'
+end
 
 #gem 'turbolinks'
 #gem 'sdoc', '~> 0.4.0',          group: :doc
